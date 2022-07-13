@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+:root {
+	--color1: #d66c05;
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0;
+
+}
+.container {
+	width: 100%;
+	max-width: 900px;
+	height: 600px;
+	background: url('../assets/images/Thunderstrom.jpeg') no-repeat;
+	background-size: cover;
+	object-fit: cover;
+	object-position: center;
+	display: flex;
+	justify-content: space-between;
+	transition: background 300ms ease-in;
+
+}
+.activeOpacity {
+	animation: opc 300ms forwards;
+}
+@keyframes opc {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.cityTemp {
+	padding: 0 40px;
+	align-self: flex-end;
+	margin-bottom: 5rem;
+}
+.cityTemp h2 {
+	font-weight: 500;
+	font-size: 55px;
+	color: #fff;
+}
+.cityIcon h1 {
+	font-weight: 600;
+	font-size: 95px;
+}
+.cityTemp .cityIcon {
+	display: flex;
+	gap: 20px;	
+	color: #fff;
+}
+.weatherSearch {
+	width: 400px;
+	height: auto;
+	background: rgba( 255, 255, 255, 0.2 );
+	backdrop-filter: blur( 10px );
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+form {
+	width: 100%;
+	position: relative;
+}
+form input[type=text] {
+	font-size: 30px;
+}
+form input[type=text]:focus {
+	outline: none;
+	color: #fff;
+}
+form button {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 25px;
+	border: none;
+	background-color: var(--color1);
+	cursor: pointer;
+}
+form input[type=text]::placeholder {
+	color: #fff;
+	font-size: 20px;
+}
+#nameCity {
+	width: 60%;
+	padding: 20px 0;
+	margin: 0 30px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+}
+.weatherDetails {
+	width: 100%;
+	height: 50vh;
+}
+.weatherDetails .cloud, .weatherDetails .humidity, .weatherDetails .wind, .weatherDetails .feelsLike, .weatherDetails .temp_min_temp_max {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 35px 30px;
+}
+.weatherTitle {
+	font-weight: 500;
+	font-size: 20px;
+	margin: 40px 30px;
+}
+.title_cloud, .title_humidity, .title_wind, .title_feelsLike, .title_temp_min_max {
+	font-weight: 400;
+}
+.deskripsiIcon #deskripsi{
+	font-weight: 400;
+}
+.icon {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+#tempMinMax img {
+	width: 15px;
+}
+
+
+/* bagian responsive */
+@media screen and (max-width: 910px) {
+	.container {
+		width: 100%;
+		margin: 0 20px;
+	}
+}
+@media screen and (max-width: 778px) {
+	body {
+		padding: 0 0;
+		height: auto;
+	}
+	.container {
+		flex-direction: column;
+		height: 100%;
+		height: auto;
+		padding: 12px;
+	}
+	.weatherSearch {
+		width: auto;
+		border-radius: 4px;
+	}
+	.weatherDetails {
+		height: auto;
+	}
+	
+}
+@media screen and (max-width: 568px) {
+	.container {
+		margin: 0 0;
+	}
+	.cityTemp {
+		padding: 0 0;
+		align-self: auto;
+		margin-bottom: 2rem;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.cityTemp h2 {
+		font-size: 50px;
+	}
+}

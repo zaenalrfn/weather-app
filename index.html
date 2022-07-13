@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<title>Weather App | Zaenal Arifin</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="cityTemp">
+			<h2 id="name"></h2>
+			<div class="cityIcon">
+				<h1 id="tempWeather"></h1>
+				<div class="deskripsiIcon">
+					<img src="" id="iconWeather" width="90">
+					<p id="deskripsi"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="weatherSearch">
+			<form id="formWeather">
+				<input type="text" id="nameCity" placeholder="cari lokasi" required>
+				<button type="submit" id="weatherFormSubmit">
+					<img src="./assets/images/loupe.png" width="25">
+				</button>
+			</form>
+
+			<div class="weatherDetails">
+				<h2 class="weatherTitle">Weather Details</h2>
+				<div class="cloud">
+					<div class="icon">
+						<img src="./assets/images/WeatherIcon - 2-32.svg" width="35">
+						<h3 class="title_cloud">Cloud</h3>
+					</div>
+					<p id="persen_cloud"></p>
+				</div>
+				<div class="humidity">
+					<div class="icon">
+						<img src="./assets/images/WeatherIcon - 1-17.svg" width="35">
+						<h3 class="title_humidity">Humidity</h3>
+					</div>
+					<p id="persen_humidity"></p>
+				</div>
+				<div class="wind">
+					<div class="icon">
+						<img src="./assets/images/WeatherIcon - 2-6.svg" width="35">
+						<h3 class="title_wind">Wind</h3>
+					</div>
+					<p id="km_wind"></p>
+				</div>
+				<div class="feelsLike">
+					<div class="icon">
+						<img src="./assets/images/WeatherIcon - 2-5.svg" width="35">
+						<h3 class="title_feelsLike">Feels like</h3>
+					</div>
+					<p id="persen_feelsLike"></p>
+				</div>
+
+				<hr width="85%" style="margin: 0 30px; opacity: 0.5;">
+
+				<div class="temp_min_temp_max">
+					<div class="icon">
+						<img src="./assets/images/temperature.png" width="35">
+						<h3 class="title_temp_min_max">temp</h3>
+					</div>
+					<p id="tempMinMax"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="assets/app.js"></script>
+</body>
+</html>
